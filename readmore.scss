@@ -1,0 +1,41 @@
+.read-more {
+  overflow: hidden;
+  position: relative;
+  transition-timing-function: ease;
+  transition-duration: 0.35s;
+  transition-property: max-height;
+  
+  [data-readless-toggle] {
+    display: none;
+  }
+  
+  &.readmore-not-needed {
+    [data-readmore-toggle], [data-readless-toggle] {
+      display: none;
+    }
+  }
+  
+  &.open {
+    [data-readmore-toggle] {
+      display: none;
+    }
+    [data-readless-toggle] {
+      display: block;
+    }
+  }
+}
+
+.faded-read-more {
+  position: relative;
+  [data-readmore-toggle], [data-readless-toggle] {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background-image: linear-gradient(to top, #fff, #f06d06);
+    padding: 6*1em 0 1em 0;
+  }
+}
