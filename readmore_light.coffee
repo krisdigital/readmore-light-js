@@ -1,5 +1,3 @@
-## Minimal readmore
-## by @krisdigital 2016
 class ReadmoreLight
   constructor: ($el, opts)->
     defaults = {
@@ -17,21 +15,21 @@ class ReadmoreLight
     origHeight = $el.height()
     openHeight = 0
     $(window).on 'resize', ->
-      openHeight =  $el[0].scrollHeight
+      openHeight =  $el.find('.read-more')[0].scrollHeight
       $el.toggleClass('readmore-not-needed', openHeight <= origHeight)
       
     $(window).trigger('resize')
     
     $el.find('[data-readmore-toggle]').on 'click', (e) ->
       e.preventDefault()
-      $el.addClass('open').css({'maxHeight': openHeight})
+      $el.addClass('open').find('.read-more').css({'maxHeight': openHeight})
       setTimeout ->
-        $el.addClass('open').css({'maxHeight': 10000})
+        $el.addClass('open').find('.read-more').css({'maxHeight': 10000})
       , opts.transitionTime
       
     $el.find('[data-readless-toggle]').on 'click', (e) ->
       e.preventDefault()
-      $el.css({'maxHeight': origHeight})
+      $el.find('.read-more').css({'maxHeight': origHeight})
       setTimeout ->
         $el.removeClass('open')
       , opts.transitionTime
