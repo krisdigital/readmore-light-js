@@ -12,10 +12,12 @@ class ReadmoreLight
     $el.append(@opts.moreTemplate)
     $el.append(@opts.lessTemplate)
     
-    origHeight = $el.height()
+    origHeight = 0
     openHeight = 0
     $(window).on 'resize', ->
-      openHeight =  $el.find('.read-more')[0].scrollHeight
+      $content = $el.find('.read-more')
+      origHeight = $content.height()
+      openHeight =  $content[0].scrollHeight
       $el.toggleClass('readmore-not-needed', openHeight <= origHeight)
       
     $(window).trigger('resize')
