@@ -1,14 +1,7 @@
 # readmore-light-js
-Minimal responsive jQuery readmore JS with CSS transitions where possible
-
-[Readmore.js](https://github.com/jedfoster/Readmore.js) had problems with iframes in Safari, so I rolled out this little script and tested it in Safari, Chrome, Firefox and IE10.
-
-It has not many options so use it as a starting point if you need more.
+Minimal responsive jQuery readmore JS with CSS transitions where possible, use it as it or as a starting point.
 
 It works in production, is tiny and you can check it out [here](https://www.surfcampseurope.com/en/camps/france/south-west-atlantic/dreamsea-surf-camp-france)!
-
-Not using CoffeeScript? [Check this out!](http://js2.coffee)
-Not using SCSS? [What about this and moving from there?](http://www.sassmeister.com)
 
 ## Usage
   _HTML_  
